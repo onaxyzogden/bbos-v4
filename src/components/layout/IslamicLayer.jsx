@@ -76,7 +76,7 @@ export default function IslamicLayer() {
             ) : (
               <span className="il-thr-done"><CheckCircle size={12} /> Stage opened</span>
             )}
-            {completedOpening[focusedStageKey] && !completedClosing[focusedStageKey] && (
+            {!completedClosing[focusedStageKey] && (
               <button className="il-thr-btn" style={{ color: getHexColor(), borderColor: getHexColor() + '40' }} onClick={() => setClosingStageKey(focusedStageKey)}>
                 <CheckCircle size={12} /> Close Stage
               </button>
