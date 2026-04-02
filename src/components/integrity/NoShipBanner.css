@@ -1,0 +1,32 @@
+.ns-banner {
+  padding: 14px 18px;
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-b);
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.ns-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--danger);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.ns-body {
+  font-size: 18px;
+  color: var(--danger);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.ns-hint {
+  font-size: 14px;
+  color: var(--text3);
+  line-height: 1.5;
+}

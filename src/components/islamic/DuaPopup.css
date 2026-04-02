@@ -1,0 +1,137 @@
+.dp-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay);
+  backdrop-filter: blur(4px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.dp-modal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  width: 90%;
+  max-width: 560px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.dp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px 12px;
+}
+
+.dp-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dp-stage {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.dp-close {
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+.dp-close:hover { background: var(--bg3); color: var(--text); }
+
+.dp-indicator {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+.dp-dot {
+  width: 28px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.dp-instruction {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text3);
+  font-style: italic;
+  line-height: 1.6;
+  padding: 0 24px 16px;
+}
+
+.dp-card {
+  margin: 0 24px 20px;
+  padding: 24px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.dp-card-attr {
+  font-size: 15px;
+  color: var(--text3);
+  margin-bottom: 16px;
+}
+
+.dp-arabic {
+  font-size: 28px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.dp-trans {
+  font-size: 14px;
+  color: var(--text3);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.dp-meaning {
+  font-size: 16px;
+  color: var(--text2);
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.dp-source {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.dp-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 24px 16px;
+}
+
+.dp-done-btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: filter 0.12s;
+}
+.dp-done-btn:hover { filter: brightness(1.1); }

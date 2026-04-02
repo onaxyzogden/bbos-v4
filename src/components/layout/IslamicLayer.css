@@ -1,0 +1,165 @@
+/* Islamic Layer column */
+.il {
+  grid-row: 2;
+  overflow-y: auto;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  padding: 16px;
+}
+
+.il-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.il-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.il-stage-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.il-attr {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.il-attr-ar {
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+/* Threshold buttons */
+.il-threshold-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.il-thr-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  background: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.il-thr-btn:hover {
+  background: var(--bg3);
+}
+
+.il-thr-done {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--success);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.il-empty {
+  color: var(--text3);
+  font-size: 18px;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+/* Section divider */
+.il-section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+/* Collapsible block pattern (matching v3.2 dua-block) */
+.il-block {
+  margin-bottom: 4px;
+}
+
+.il-block-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.il-block-toggle:hover {
+  background: var(--bg3);
+  border-color: var(--border2);
+}
+
+.il-block-glyph {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.il-block-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.il-block-popup {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text3);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: all 0.12s;
+  flex-shrink: 0;
+}
+.il-block-popup:hover {
+  background: var(--bg4);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.il-block-chev {
+  color: var(--text3);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.il-block-chev.open {
+  transform: rotate(180deg);
+}
+
+.il-block-body {
+  padding: 8px 0 4px;
+  animation: fadeIn 0.2s ease;
+}

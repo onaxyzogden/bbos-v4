@@ -1,0 +1,181 @@
+/* Sidebar — ported from truthmarket_bbos.html:90-244 */
+.sb {
+  grid-row: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding: 12px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sb-overview-btn {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.12s;
+  width: 100%;
+}
+.sb-overview-btn:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.sb-search-wrap {
+  position: relative;
+}
+.sb-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text3);
+  pointer-events: none;
+}
+.sb-search {
+  width: 100%;
+  padding: 6px 10px 6px 30px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.12s;
+}
+.sb-search:focus {
+  border-color: var(--accent);
+}
+
+/* Stage sections */
+.sb-stages {
+  flex: 1;
+  padding: 4px 0;
+}
+
+.sb-stage {
+  margin-bottom: 2px;
+}
+
+.sb-stage-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  text-align: left;
+  transition: background 0.12s;
+}
+.sb-stage-header:hover {
+  background: var(--bg3);
+}
+
+.sb-stage-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  min-width: 14px;
+}
+
+.sb-stage-name {
+  font-weight: 500;
+  flex: 1;
+}
+
+.sb-stage-attr {
+  font-size: 13px;
+  opacity: 0.7;
+  display: none;
+}
+@media (min-width: 300px) {
+  .sb-stage-attr { display: block; }
+}
+
+.sb-stage-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+/* Tool items */
+.sb-tools {
+  padding: 2px 0 4px;
+}
+
+.sb-tool {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 5px 12px 5px 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text2);
+  text-align: left;
+  transition: all 0.12s;
+  border-left: 3px solid transparent;
+}
+.sb-tool:hover {
+  background: var(--bg3);
+  color: var(--text);
+}
+.sb-tool.selected {
+  background: var(--bg4);
+  color: var(--text);
+  border-left-color: var(--accent);
+}
+
+.sb-tool-dot {
+  font-size: 13px;
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
+
+.sb-tool-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sb-tool-perm {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--bg3);
+  flex-shrink: 0;
+}

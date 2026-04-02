@@ -1,0 +1,131 @@
+.av {
+  padding: 24px 32px;
+  max-width: 900px;
+}
+
+.av-header { margin-bottom: 24px; }
+.av-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+.av-sub {
+  color: var(--text3);
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+.av-stage { margin-bottom: 20px; }
+
+.av-stage-hdr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.av-stage-badge {
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+.av-stage-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.av-stage-attr {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.av-stage-status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+}
+
+.av-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.av-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  transition: all 0.12s;
+}
+.av-row:hover {
+  border-color: var(--border2);
+  background: var(--bg3);
+}
+
+.av-bar {
+  width: 3px;
+  height: 28px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.av-body { flex: 1; min-width: 0; }
+
+.av-name {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.av-ref {
+  font-size: 14px;
+  color: var(--text3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.av-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.av-tool-status { font-size: 13px; }
+
+.av-perm {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: var(--bg4);
+}
+
+.av-sec {
+  font-size: 14px;
+  color: var(--text3);
+}

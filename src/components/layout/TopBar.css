@@ -1,0 +1,174 @@
+/* TopBar — ported from truthmarket_bbos.html:58-89 */
+.tb {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  gap: 10px;
+  z-index: 10;
+  position: relative;
+  flex-wrap: nowrap;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.tb-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.tb-logo-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.tb-logo-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text);
+  letter-spacing: 1.2px;
+}
+
+.tb-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.tb-spacer {
+  flex: 1;
+  min-width: 8px;
+}
+
+/* Role selector */
+.tb-role-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+.tb-role-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+.tb-role-btn {
+  background: none;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+}
+.tb-role-btn:hover {
+  background: var(--bg3);
+}
+.tb-role-initials {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.tb-role-dropdown {
+  position: fixed;
+  top: 48px;
+  left: 100px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+  min-width: 240px;
+  z-index: 9999;
+  box-shadow: var(--shadow-lg);
+}
+.tb-role-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  transition: background 0.12s;
+}
+.tb-role-option:hover {
+  background: var(--bg3);
+}
+.tb-role-option.active {
+  background: var(--bg4);
+}
+.tb-role-sub {
+  color: var(--text3);
+  font-size: 14px;
+  margin-left: auto;
+}
+
+/* View buttons */
+.tb-view-group {
+  display: flex;
+  gap: 2px;
+  background: var(--bg3);
+  border-radius: 6px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.tb-view-btn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  color: var(--text2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+.tb-view-btn.active {
+  background: var(--bg);
+  color: var(--text);
+}
+.tb-view-btn:hover:not(.active) {
+  color: var(--text);
+}
+
+/* Icon buttons */
+.tb-icon-btn {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text2);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s;
+  flex-shrink: 0;
+}
+.tb-icon-btn:hover {
+  background: var(--bg3);
+  color: var(--text);
+}

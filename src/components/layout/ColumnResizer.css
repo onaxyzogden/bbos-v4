@@ -1,0 +1,58 @@
+/* Column edge — wide clickable strip with collapse toggle */
+.col-edge {
+  width: 28px;
+  cursor: col-resize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.15s;
+  z-index: 2;
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.col-edge:hover {
+  background: var(--bg3);
+}
+
+.col-edge-line {
+  width: 1px;
+  height: 100%;
+  background: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.col-edge:hover .col-edge-line {
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+/* Toggle chevron indicator */
+.col-edge-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--text3);
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+  cursor: pointer;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+}
+.col-edge:hover .col-edge-toggle {
+  opacity: 1;
+  color: var(--text);
+}
+.col-edge-toggle:hover {
+  background: var(--bg4);
+  color: var(--accent);
+}

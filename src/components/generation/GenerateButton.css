@@ -1,0 +1,129 @@
+.gen-wrap {
+  margin: 16px 0;
+}
+
+.gen-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.gen-btn:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.gen-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.gen-btn.loading {
+  border-color: var(--warning);
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+.gen-btn.done {
+  border-color: var(--success);
+  color: var(--success);
+  background: var(--success-bg);
+}
+.gen-btn.error {
+  border-color: var(--danger);
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.gen-spinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gen-error {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--danger-bg);
+  border: 1px solid var(--danger-b);
+  border-radius: 6px;
+  font-size: 15px;
+  color: var(--danger);
+  line-height: 1.5;
+}
+
+.gen-no-key {
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  color: var(--text3);
+  margin: 16px 0;
+}
+
+/* Threshold gate */
+.gen-threshold-gate {
+  border-color: var(--warning);
+  color: var(--warning);
+  background: var(--warning-bg);
+}
+.gen-threshold-gate:hover {
+  background: var(--warning);
+  color: var(--on-accent);
+}
+.gen-gate-hint {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+/* Upstream readiness warning */
+.gen-upstream-warn {
+  padding: 12px 14px;
+  background: var(--warning-bg);
+  border: 1px solid var(--warning);
+  border-radius: 8px;
+}
+.gen-upstream-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--warning);
+  margin-bottom: 6px;
+}
+.gen-upstream-list {
+  margin: 4px 0 8px 18px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text2);
+}
+.gen-upstream-list li {
+  margin: 2px 0;
+}
+.gen-upstream-hint {
+  font-size: 13px;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+.gen-bypass {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-color: var(--text3);
+  color: var(--text3);
+  background: transparent;
+}
+.gen-bypass:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
