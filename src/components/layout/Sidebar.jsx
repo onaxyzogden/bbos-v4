@@ -58,10 +58,10 @@ export default function Sidebar({ toolsByStage }) {
             return true;
           });
 
-          // Count completed
-          const completedCount = tools.filter((t) => getToolStatus(t) === 'Complete').length;
+          // Count completed among role-visible tools only
+          const completedCount = visibleTools.filter((t) => getToolStatus(t) === 'Complete').length;
 
-          if (searchLower && visibleTools.length === 0) return null;
+          if (visibleTools.length === 0) return null;
 
           return (
             <div key={stage.key} className="sb-stage">
@@ -78,7 +78,7 @@ export default function Sidebar({ toolsByStage }) {
                   {attrLang === 'ar' ? stage.attr_ar : stage.attr}
                 </span>
                 <span className="sb-stage-count">
-                  {completedCount}/{tools.length}
+                  {completedCount}/{visibleTools.length}
                 </span>
                 {isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
               </button>
